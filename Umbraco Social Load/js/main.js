@@ -18,7 +18,7 @@ function Umbraco() {
             console.log("Grabbed URL : " + tabURL);
 
             //check if in back-office
-            if (tabURL.indexOf("/umbraco/") > -1) {
+            if (tabURL.indexOf("umbraco") > -1) {
                 //if found						
                 var newURL = extractDomain(String(tabURL));
                 console.log("Extracted URL: " + newURL);
