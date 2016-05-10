@@ -73,7 +73,7 @@ function extractDomain(url) {
     }
 
     //find & remove port number
-    domain = domain.split(':')[0];
+    //domain = domain.split(':')[0];
 
     return domain;
 }
