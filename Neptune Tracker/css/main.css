@@ -1,0 +1,54 @@
+﻿body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    background-image: url('../img/nebula.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    color: white;
+}
+#players {
+    /* avoid an excessively wide status text */
+    height: 400px;
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.container {
+    float: left;
+    height: 170px;
+    width: 100%;
+}
+.true {
+    background-color: green;
+    height: 20px;
+}
+.false {
+    background-color: red;
+    height: 20px;
+}
+.name {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+.db {
+    border: 1px red solid;
+}
+
+.stats {
+    float: left;
+    width: 33%;
+    height: 100%
+}
+
+.left {
+    float: left;
+    color: white;
+}
+
+.clearfix {
+    clear: both;
+}

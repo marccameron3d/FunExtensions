@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+
+    "name": "Neptune Stats Tracker",
+    "description": "This will show the player stats of the neptune game",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*" ],
+            "css": [ "/css/main.css" ],
+            "js" : [ "/js/content.js"]
+        }
+    ],
+    "background": {
+    },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },  
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "https://neptunes-pride-api.herokuapp.com/"
+  ]
+}
