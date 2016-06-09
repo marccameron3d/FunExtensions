@@ -10,9 +10,18 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnSocial').addEventListener('click', OpenSocialTabs);
 });
 
+
 function Umbraco() {
     console.log("umbraco tab");
-   //Get current Tab url
+    var debugLine = ""
+    //Get current Tab url
+    if ($('#debug').is(":checked"))
+    {
+        debugLine = "?umbDebugShowTrace=true";
+        chrome.storage.sync.set({
+            debug: true
+        });
+    }
         chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
             tabURL = tabs[0].url;
             console.log("Grabbed URL : " + tabURL);
@@ -23,7 +32,7 @@ function Umbraco() {
                 var newURL = extractDomain(String(tabURL));
                 console.log("Extracted URL: " + newURL);
 
-                var finalUrl = "http://" + newURL;
+                var finalUrl = "http://" + newURL + '/' + debugLine;
                 console.log("Final URL: " + finalUrl);
 
                 chrome.tabs.create({ url: finalUrl });
